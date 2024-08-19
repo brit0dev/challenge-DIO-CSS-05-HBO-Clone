@@ -12,15 +12,20 @@
     #490cb0 20%,
     transparent 50%
   );
+  --btn-text-color: #fff;
   --btn-link-bg: var(--tertiary-color);
   --btn-link-hover-bg: #fff;
   --btn-link-color: #000;
+
+  --header-bg: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+  --header-after-bg: linear-gradient(0, var(--primary-color), transparent);
   --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
   --divider-bg-color: linear-gradient(
     90deg,
     #5516ba,
     rgba(255, 0, 229, 0.5) 80%
   );
+
   --nav-bg-color: rgba(0, 0, 0, 0.3);
   --text-color: #fff;
   --link-color: #9e86ff;
@@ -50,6 +55,35 @@
   background-color: var(--primary-color);
   color: var(--text-color);
   font-family: 'Raleway', sans-serif;
+}
+
+.button {
+  color: var(--btn-text-color);
+  padding: 1rem 2.5rem;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 10rem;
+
+  cursor: pointer;
+}
+
+.button--gradient {
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+
+  letter-spacing: 0.25rem;
+
+  outline: 2px solid transparent;
+
+  transition: transform 1s, background-position 1s, outline 1s, color 1s;
+}
+.button--gradient:hover {
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.05);
 }
 
 .navbar {
@@ -89,10 +123,137 @@
   padding: 0.5rem 1.6rem;
 
   border-radius: 10rem;
-  transition: all 1s;
+  transition: background-color 1s, color 1s;
 }
 
 .menu__item--rounded:hover {
   background-color: var(--btn-link-hover-bg);
   color: var(--btn-link-color);
+}
+
+.header {
+  background: var(--header-bg);
+  background-size: 400%;
+  padding: 6.25rem 0 18rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  animation: header-bg-animation 10s ease infinite alternate;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 2.5rem;
+}
+
+.header-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.header-title__light {
+  font-size: 2rem;
+  font-weight: lighter;
+  display: block;
+}
+
+.header-content__separator {
+  background: var(--divider-bg-color);
+  height: 0.33rem;
+  width: 140%;
+}
+
+.header-offer {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+}
+
+.header-offer__price {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header-offer__period {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.header__button {
+  font-size: 1rem;
+
+  animation: wiggle-animation 2.2s linear infinite;
+}
+
+.header__note {
+  width: 25ch;
+
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.header::after {
+  background: var(--header-after-bg);
+  content: '';
+
+  width: 100%;
+  height: 15rem;
+
+  position: absolute;
+  bottom: 0;
+}
+.cards {
+  height: 100rem;
+}
+
+@keyframes wiggle-animation {
+  0%,
+  10% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes header-bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
