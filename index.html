@@ -10,17 +10,25 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="body">
     <nav class="navbar">
-      <img
-        class="navbar__logo"
-        src="assets/images/app__logo-hbo-logo.svg"
-        alt="Logo HBOMAX"
-      />
+      <a href="/">
+        <img
+          class="navbar__logo"
+          src="assets/images/app__logo-hbo-logo.svg"
+          alt="Logo HBOMAX"
+        />
+      </a>
       <div class="menu">
         <a class="menu__item" href="/signin.html">Entrar</a>
-        <a class="menu__item menu__item--rounded" href="/signin.html"
+        <a class="menu__item menu__item--rounded" href="#subscription"
           >Assine agora</a
         >
       </div>
@@ -47,20 +55,23 @@
         <div class="header-content__separator"></div>
         <div class="header-offer">
           <p>Assinaturas a partir de</p>
-          <p class="header-offer__price">
-            R$14,15 <span class="header-offer__period">/mês*</span>
+          <p class="header-offer__price price">
+            R$14,15 <span class="header-offer__period text--small">/mês*</span>
           </p>
         </div>
-        <button class="header__button button button--gradient">
+        <a href="#subscription" class="header__button button button--gradient">
           Assine agora
-        </button>
-        <div class="header__note">
+        </a>
+        <div class="header__note text--small">
           *aplicável ao plano anual com o pagamento antecipado.
         </div>
       </div>
     </header>
     <main>
-      <section id="subscription" class="subscription main-section">
+      <section
+        id="subscription"
+        class="subscription main-section movie-background"
+      >
         <div class="section-container">
           <h2 class="main-section__title">
             Conheça nossos planos e economize na assinatura trimestral ou anual
@@ -71,8 +82,9 @@
               <div>
                 <div class="price-cards__header">
                   <h3 class="price-cards__title">Mobile</h3>
-                  <p class="price-cards__price">
-                    R$19,90 <span class="price-cards__period">/mês</span>
+                  <p class="price-cards__price price price--cards">
+                    R$19,90
+                    <span class="price-cards__period text--small">/mês</span>
                   </p>
                 </div>
                 <ul class="price-cards__list">
@@ -97,8 +109,9 @@
               <div>
                 <div class="price-cards__header">
                   <h3 class="price-cards__title">Multitelas</h3>
-                  <p class="price-cards__price">
-                    R$27,90 <span class="price-cards__period">/mês</span>
+                  <p class="price-cards__price price price--cards">
+                    R$27,90
+                    <span class="price-cards__period text--small">/mês</span>
                   </p>
                 </div>
                 <ul class="price-cards__list">
@@ -221,35 +234,35 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="section-container">
-          <div>
-            <a href="/" class="footer__link">Agora na hbo max</a>
-            <a href="/" class="footer__link">Em breve</a>
-            <a href="/" class="footer__link">Filme em destaque</a>
-            <a href="/" class="footer__link">Séries</a>
-            <a href="/" class="footer__link">Ajuda</a>
-          </div>
-          <p class="footer__legal">
-            © 2022 WarnerMedia Direct Latin America, LLC. Todos os direitos
-            reservados. HBO Max é usado sob licença.
-          </p>
-          <div class="footer__social-container">
-            <a href="/" class="footer__social-link"
-              ><img src="/assets/images/logo-fb_0.png" alt="Facebook"
-            /></a>
-            <a href="/" class="footer__social-link"
-              ><img src="/assets/images/logo-twitter_0.png" alt="Twitter"
-            /></a>
-            <a href="/" class="footer__social-link"
-              ><img src="/assets/images/logo-instagram_0.png" alt="Instagram"
-            /></a>
-            <a href="/" class="footer__social-link"
-              ><img src="/assets/images/logo-youtube_0.png" alt="Youtube"
-            /></a>
-          </div>
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="section-container">
+        <div>
+          <a href="/" class="footer__link">Agora na hbo max</a>
+          <a href="/" class="footer__link">Em breve</a>
+          <a href="/" class="footer__link">Filme em destaque</a>
+          <a href="/" class="footer__link">Séries</a>
+          <a href="/" class="footer__link">Ajuda</a>
+        </div>
+        <p class="footer__legal text--small">
+          © 2022 WarnerMedia Direct Latin America, LLC. Todos os direitos
+          reservados. HBO Max é usado sob licença.
+        </p>
+        <div class="footer__social-container">
+          <a href="/" class="footer__social-link">
+            <img src="/assets/images/logo-fb_0.png" alt="Facebook" />
+          </a>
+          <a href="/" class="footer__social-link">
+            <img src="/assets/images/logo-twitter_0.png" alt="Twitter" />
+          </a>
+          <a href="/" class="footer__social-link">
+            <img src="/assets/images/logo-instagram_0.png" alt="Instagram" />
+          </a>
+          <a href="/" class="footer__social-link">
+            <img src="/assets/images/logo-youtube_0.png" alt="Youtube" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

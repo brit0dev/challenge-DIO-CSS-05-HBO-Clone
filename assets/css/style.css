@@ -1,6 +1,4 @@
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
 
 :root {
   --primary-color: #020228;
@@ -80,10 +78,33 @@
 
   transition: transform 1s, background-position 1s, outline 1s, color 1s;
 }
+
 .button--gradient:hover {
   background-position: 100%;
   outline: 2px solid var(--secondary-color);
   transform: scale(1.05);
+}
+
+.price {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.price--cards {
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+.text--small {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.movie-background {
+  background-image: url('/assets/images/background-movies-series.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar {
@@ -184,17 +205,6 @@
   font-size: 1.25rem;
 }
 
-.header-offer__price {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.header-offer__period {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 .header__button {
   font-size: 1rem;
 
@@ -203,9 +213,6 @@
 
 .header__note {
   width: 25ch;
-
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
 }
 
 .header::after {
@@ -230,9 +237,9 @@
   font-weight: 500;
   text-align: center;
 }
+
 .subscription {
-  background-image: url('/assets/images/background-movies-series.png');
-  background-size: cover;
+  scroll-margin-top: 5rem;
 }
 
 .subscription__cards-container {
@@ -270,17 +277,8 @@
   align-items: center;
 }
 
-.price-cards__price {
-  font-family: 'Raleway', sans-serif;
-  color: var(--secondary-color);
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 .price-cards__period {
   color: var(--text-color);
-  font-size: 1rem;
-  font-weight: 300;
 }
 
 .price-cards__list {
@@ -343,7 +341,6 @@
 }
 
 .footer__link {
-  color: var(--link-color);
   margin: 0 0.875rem;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -361,7 +358,6 @@
   margin: 1rem;
   color: var(--link-color);
   font-size: 0.75rem;
-  font-weight: 300;
 }
 
 .footer__social-container {
