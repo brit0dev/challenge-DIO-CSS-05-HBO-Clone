@@ -30,8 +30,8 @@
   --form-bg-color: rgba(211, 211, 211, 0.06);
   --form-field-bg-color: rgba(0, 0, 0, 0.2);
   --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-border-error: 1px solid rgb(255, 76, 76);
   --form-field-placeholder: rgba(255, 255, 255, 0.7);
-  --form-field-error: rgb(255, 76, 76);
 
   scroll-behavior: smooth;
 }
@@ -366,6 +366,68 @@
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+}
+
+.body--signin {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.signin__container {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form {
+  background: var(--form-bg-color);
+  width: 100%;
+  max-width: 50rem;
+
+  padding: 2.5rem;
+
+  border-radius: 0.5rem;
+}
+
+.login__title {
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.login__label {
+  margin: 2.5rem 0 0.75rem;
+}
+
+.login__field {
+  background: var(--form-field-bg-color);
+  color: var(--text-color);
+  width: 100%;
+  margin: 0.75rem 0;
+  padding: 1rem;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+
+  border: var(--form-field-border);
+  border-radius: 0.5rem;
+}
+
+.login__field:invalid {
+  border: var(--form-field-border-error);
+}
+
+.login__actions {
+  margin-top: 2.5rem;
+}
+
+.login__forget-pass {
+  margin: 0 1.5rem;
+  font-weight: bold;
 }
 
 @keyframes wiggle-animation {
