@@ -288,9 +288,52 @@
 .price-cards__item {
   padding: 0.5rem 0 0.5rem 0.8rem;
 }
+
 .price-cards__item::marker {
   content: '+';
   font-size: 2rem;
+}
+
+.discover {
+  margin-top: 6.75rem;
+}
+
+.discover__container {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  grid-template-rows: repeat(2, min-content);
+  gap: 4%;
+}
+
+.discover__image-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.discover__img {
+  width: 100%;
+  opacity: 0;
+  transition: transform 1s, opacity 2s;
+}
+
+.discover__image-container .discover__img:nth-child(2) {
+  position: absolute;
+  opacity: 1;
+  transition: transform 1s, opacity 2s;
+}
+
+.discover__image-container:hover .discover__img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.discover__image-container:hover .discover__img:nth-child(2) {
+  opacity: 0;
 }
 
 @keyframes wiggle-animation {
